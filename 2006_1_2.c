@@ -13,7 +13,7 @@
 #include "acc_tbl.h"
 #include "smooth_turn_tbl.h" 
 
-Test 1666
+Test 14df
 
 #define Lcd_Page_Limit 17
 #define OneBlockCntStep 210
@@ -29,56 +29,56 @@ Test 1666
 #define RC_LOW 22
 #define RS_LOW 25
 
-unsigned int LM_Spd_index = 0;          //¿ŞÂÊ ¸ğÅÍ °¡¼Óµµ Å×ÀÌºí ¼Óµµ ÀÎµ¦½º°ª ÀúÀå
-unsigned int RM_Spd_index = 0;          //¿À¸¥ÂÊ ¸ğÅÍ °¡¼Óµµ Å×ÀÌºí ¼Óµµ ÀÎµ¦½º°ª ÀúÀå
-unsigned int LM_Smpd_index = 0;         //¿ŞÂÊ ¸ğÅÍ ½º¹«½ºÅÏ Å×ÀÌºí ¼Óµµ ÀÎµ¦½º
-unsigned int RM_Smpd_index = 0;         //¿À¸¥ÂÊ ¸ğÅÍ ½º¹«½ºÅÏ Å×ÀÌºí ¼Óµµ ÀÎµ¦½º
-unsigned char LM_Sm_Tn_mode = 0;        //ÇöÀç ½º¹«½ºÅÏ ÁøÀÔÀÎÁö?
-unsigned char RM_Sm_Tn_mode = 0;        //ÇöÀç ½º¹«½ºÅÏ ÁøÀÔÀÎÁö?
-unsigned char LM_Spd_Limit = 100;       //¿ŞÂÊ¸ğÅÍ ÃÖ°í¼Óµµ ÁöÁ¤
-unsigned char RM_Spd_Limit = 100;       //¿À¸¥ÂÊ ¸ğÅÍ ÃÖ°í¼Óµµ ÁöÁ¤
-unsigned char LM_Spd_Now = 0;            //¿ŞÂÊ ¸ğÅÍ ÇöÀç ¼Óµµ
-unsigned char RM_Spd_Now = 0;            //¿À¸¥ÂÊ ¸ğÅÍ ÇöÀç ¼Óµµ
-unsigned char Mot_TnStep_Cnt = 0;       //¸ğÅÍ Á¦ÀÚ¸® ÅÏÇÒ¶§ ÂüÁ¶ÇÒ ½ºÅÜ Ä«¿îÆ® º¯¼ö
-unsigned int LMot_BlStep_Cnt = 110;       //¸¶¿ì½º°¡ 1ºí·Ï °¬´ÂÁö °Ë»ç¸¦ À§ÇÑ ½ºÅÜ Ä«¿îÆ® º¯¼ö
-unsigned int RMot_BlStep_Cnt = 110;       //¸¶¿ì½º°¡ 1ºí·Ï °¬´ÂÁö °Ë»ç¸¦ À§ÇÑ ½ºÅÜ Ä«¿îÆ® º¯¼ö
+unsigned int LM_Spd_index = 0;          //ì™¼ìª½ ëª¨í„° ê°€ì†ë„ í…Œì´ë¸” ì†ë„ ì¸ë±ìŠ¤ê°’ ì €ì¥
+unsigned int RM_Spd_index = 0;          //ì˜¤ë¥¸ìª½ ëª¨í„° ê°€ì†ë„ í…Œì´ë¸” ì†ë„ ì¸ë±ìŠ¤ê°’ ì €ì¥
+unsigned int LM_Smpd_index = 0;         //ì™¼ìª½ ëª¨í„° ìŠ¤ë¬´ìŠ¤í„´ í…Œì´ë¸” ì†ë„ ì¸ë±ìŠ¤
+unsigned int RM_Smpd_index = 0;         //ì˜¤ë¥¸ìª½ ëª¨í„° ìŠ¤ë¬´ìŠ¤í„´ í…Œì´ë¸” ì†ë„ ì¸ë±ìŠ¤
+unsigned char LM_Sm_Tn_mode = 0;        //í˜„ì¬ ìŠ¤ë¬´ìŠ¤í„´ ì§„ì…ì¸ì§€?
+unsigned char RM_Sm_Tn_mode = 0;        //í˜„ì¬ ìŠ¤ë¬´ìŠ¤í„´ ì§„ì…ì¸ì§€?
+unsigned char LM_Spd_Limit = 100;       //ì™¼ìª½ëª¨í„° ìµœê³ ì†ë„ ì§€ì •
+unsigned char RM_Spd_Limit = 100;       //ì˜¤ë¥¸ìª½ ëª¨í„° ìµœê³ ì†ë„ ì§€ì •
+unsigned char LM_Spd_Now = 0;            //ì™¼ìª½ ëª¨í„° í˜„ì¬ ì†ë„
+unsigned char RM_Spd_Now = 0;            //ì˜¤ë¥¸ìª½ ëª¨í„° í˜„ì¬ ì†ë„
+unsigned char Mot_TnStep_Cnt = 0;       //ëª¨í„° ì œìë¦¬ í„´í• ë•Œ ì°¸ì¡°í•  ìŠ¤í… ì¹´ìš´íŠ¸ ë³€ìˆ˜
+unsigned int LMot_BlStep_Cnt = 110;       //ë§ˆìš°ìŠ¤ê°€ 1ë¸”ë¡ ê°”ëŠ”ì§€ ê²€ì‚¬ë¥¼ ìœ„í•œ ìŠ¤í… ì¹´ìš´íŠ¸ ë³€ìˆ˜
+unsigned int RMot_BlStep_Cnt = 110;       //ë§ˆìš°ìŠ¤ê°€ 1ë¸”ë¡ ê°”ëŠ”ì§€ ê²€ì‚¬ë¥¼ ìœ„í•œ ìŠ¤í… ì¹´ìš´íŠ¸ ë³€ìˆ˜
 
-unsigned char This_Block_Pos = 0x00;    //¸¶¿ì½º ÇöÁ¦ ºí·ÏÀÇ À§Ä¡
-unsigned char Goal_Block_Pos[4] = {0x28, 0x23, 0x23, 0x23}; //°ñºí·Ï À§Ä¡
-unsigned char This_Dir = NORTH;          //»óÀ§ 4ºñÆ® Áß 1000=>¼­, 0100=>³², 0010=>µ¿, 0001=>ºÏ
-unsigned char Maze_Info[256];           //¹Ì·Î º® Á¤º¸ & Áö³ª°£ ÈçÀû ÀúÀå º¯¼ö
-                                        //»óÀ§ 4ºñÆ® Áö³ª°¬´ø ¹æÀ§, ÇÏÀ§ 4ºñÆ®´Â º®Á¤º¸
-unsigned char FastLoad[256];            //ÃÖ´Ü°Å¸® ÁÖÇàÁ¤º¸(¹æÀ§) ÀúÀåº¯¼ö 
+unsigned char This_Block_Pos = 0x00;    //ë§ˆìš°ìŠ¤ í˜„ì œ ë¸”ë¡ì˜ ìœ„ì¹˜
+unsigned char Goal_Block_Pos[4] = {0x28, 0x23, 0x23, 0x23}; //ê³¨ë¸”ë¡ ìœ„ì¹˜
+unsigned char This_Dir = NORTH;          //ìƒìœ„ 4ë¹„íŠ¸ ì¤‘ 1000=>ì„œ, 0100=>ë‚¨, 0010=>ë™, 0001=>ë¶
+unsigned char Maze_Info[256];           //ë¯¸ë¡œ ë²½ ì •ë³´ & ì§€ë‚˜ê°„ í”ì  ì €ì¥ ë³€ìˆ˜
+                                        //ìƒìœ„ 4ë¹„íŠ¸ ì§€ë‚˜ê°”ë˜ ë°©ìœ„, í•˜ìœ„ 4ë¹„íŠ¸ëŠ” ë²½ì •ë³´
+unsigned char FastLoad[256];            //ìµœë‹¨ê±°ë¦¬ ì£¼í–‰ì •ë³´(ë°©ìœ„) ì €ì¥ë³€ìˆ˜ 
 unsigned char FastLoadIndex=0;
-unsigned char BlockQueue[256];          //¹Ì·Î ÃÊ´Ü°Å¸® °Ë»ç¿ë queue
+unsigned char BlockQueue[256];          //ë¯¸ë¡œ ì´ˆë‹¨ê±°ë¦¬ ê²€ì‚¬ìš© queue
 unsigned char BlockWeight[256];
 
 unsigned char Turn_Limit = 0; 
-unsigned char Turn_90Limit = 80;           //ÅÏ ½ºÅÜ ¼ö
-unsigned char Turn_180Limit = 160;         //ÅÏ ½ºÅÜ ¼ö
+unsigned char Turn_90Limit = 80;           //í„´ ìŠ¤í… ìˆ˜
+unsigned char Turn_180Limit = 160;         //í„´ ìŠ¤í… ìˆ˜
 
-unsigned char Sensor_data[6]={255, 255, 255, 255, 255, 255};    //¼¾¼­ µ¥ÀÌÅÍ
-unsigned char Sen_sel = 0;             //¼¾¼­ µ¥ÀÌÅÍ µ¥ÀÌÅÍ ÀúÀå ÀÎµ¦½º
+unsigned char Sensor_data[6]={255, 255, 255, 255, 255, 255};    //ì„¼ì„œ ë°ì´í„°
+unsigned char Sen_sel = 0;             //ì„¼ì„œ ë°ì´í„° ë°ì´í„° ì €ì¥ ì¸ë±ìŠ¤
 
-unsigned char L90Tn_Offset = 20;        //¿ŞÂÊ90µµ ÅÏ ÁÂ¿ì¼¾¼­ ºñ±³ ¿ÀÇÁ¼Â
-unsigned char R90Tn_Offset = 20;        //¿À¸¥ÂÊ 90µµ ÅÏ ÁÂ¿ì¼¾¼­ ºñ±³ ¿ÀÇÁ¼Â
-unsigned char FWall_Chk_Offset = 50;    //Àü¹æ ÁøÀÔ½Ã Á¤ÁöÇÒ ±âÁØ ¼¾¼­°ª
+unsigned char L90Tn_Offset = 20;        //ì™¼ìª½90ë„ í„´ ì¢Œìš°ì„¼ì„œ ë¹„êµ ì˜¤í”„ì…‹
+unsigned char R90Tn_Offset = 20;        //ì˜¤ë¥¸ìª½ 90ë„ í„´ ì¢Œìš°ì„¼ì„œ ë¹„êµ ì˜¤í”„ì…‹
+unsigned char FWall_Chk_Offset = 50;    //ì „ë°© ì§„ì…ì‹œ ì •ì§€í•  ê¸°ì¤€ ì„¼ì„œê°’
 //unsigned char mode = 0;                      
 unsigned int  num_cnt = 0;
 //unsigned char menu_ok = 0;
 //unsigned char menu_ok_cnt = 0;
-unsigned char LCD_Page_Num = 4;         //ÇöÁ¦ LCDµ¥ÀÌÅÍ Ãâ·Â ÆäÀÌÁö°ª ÀúÀå
+unsigned char LCD_Page_Num = 4;         //í˜„ì œ LCDë°ì´í„° ì¶œë ¥ í˜ì´ì§€ê°’ ì €ì¥
 
 
 Test 3
 
 /////////////////////////////////////////////////////////////
-//		µ¥ÀÌÅÍ LCD¿¡ Ãâ·Â ÇÔ¼ö
+//		ë°ì´í„° LCDì— ì¶œë ¥ í•¨ìˆ˜
 //-----------------------------------------------------------
 void LCD_Page_Viwe(unsigned char page)
 {    
      LCD_Clear();
-     //ÁÂ¿ì Ãø¸é ¼¾¼­ µ¥ÀÌÅÍ Ç¥½Ã
+     //ì¢Œìš° ì¸¡ë©´ ì„¼ì„œ ë°ì´í„° í‘œì‹œ
      if(page == 0)  
      {
           LCD_String(0X80, " LS ");
@@ -86,7 +86,7 @@ void LCD_Page_Viwe(unsigned char page)
           LCD_DatatoDec(0xc0, Sensor_data[0]);
           LCD_DatatoDec(0xc4, Sensor_data[5]);
      }
-     //ÁÂ¿ì ´ë°¢¼± ¼¾¼­ µ¥ÀÌÅÍ Ç¥½Ã
+     //ì¢Œìš° ëŒ€ê°ì„  ì„¼ì„œ ë°ì´í„° í‘œì‹œ
      else if(page == 1)
      {
           LCD_String(0X80, " LC ");
@@ -94,7 +94,7 @@ void LCD_Page_Viwe(unsigned char page)
           LCD_DatatoDec(0xc0, Sensor_data[1]);
           LCD_DatatoDec(0xc4, Sensor_data[4]);
      }
-     //ÁÂ¿ì Àü¸é ¼¾¼­ µ¥ÀÌÅÍ Ç¥½Ã
+     //ì¢Œìš° ì „ë©´ ì„¼ì„œ ë°ì´í„° í‘œì‹œ
      else if(page == 2)
      {
           LCD_String(0X80, " LF ");
@@ -102,7 +102,7 @@ void LCD_Page_Viwe(unsigned char page)
           LCD_DatatoDec(0xc0, Sensor_data[2]);
           LCD_DatatoDec(0xc4, Sensor_data[3]);
      }
-     //ÇöÁ¦ ¸¶¿ì½º ¹æÀ§ Ç¥½Ã
+     //í˜„ì œ ë§ˆìš°ìŠ¤ ë°©ìœ„ í‘œì‹œ
      else if(page == 3)
      {
           LCD_String(0X80, "ThisDir!");
@@ -123,27 +123,27 @@ void LCD_Page_Viwe(unsigned char page)
                LCD_String(0xc2, "West");
           }
      }
-      //ÇöÁ¦ ¸¶¿ì½º À§Ä¡ Ç¥½Ã
+      //í˜„ì œ ë§ˆìš°ìŠ¤ ìœ„ì¹˜ í‘œì‹œ
      else if(page == 4)
      {
           LCD_String(0X80, "ThisPos!");
           LCD_DatatoHex2(0xc2, This_Block_Pos);
      }
-     //¿ŞÂÊ¸ğÅÍ ºí·° ½ºÅÜ Ä«¿îÆ® Ç¥½Ã
+     //ì™¼ìª½ëª¨í„° ë¸”ëŸ­ ìŠ¤í… ì¹´ìš´íŠ¸ í‘œì‹œ
      else if(page == 5)
      {
           LCD_String(0X80, "LMotStep");
           LCD_String(0Xc0, "Cnt:");
           LCD_DatatoDec(0xc5, LMot_BlStep_Cnt);
      }
-     //¿À¸¥ÂÊ¸ğÅÍ ºí·Ï ½ºÅÜ Ä«¿îÆ® Ç¥½Ã
+     //ì˜¤ë¥¸ìª½ëª¨í„° ë¸”ë¡ ìŠ¤í… ì¹´ìš´íŠ¸ í‘œì‹œ
      else if(page == 6)
      {
           LCD_String(0X80, "RMotStep");
           LCD_String(0Xc0, "Cnt:");
           LCD_DatatoDec(0xc5, RMot_BlStep_Cnt);
      }
-     //¹Ì·Î Á¤º¸ Ç¥½Ã
+     //ë¯¸ë¡œ ì •ë³´ í‘œì‹œ
      else if(page ==7)
      {
           LCD_String(0x80, "MazeInfo");
@@ -168,14 +168,14 @@ void LCD_Page_Viwe(unsigned char page)
           LCD_Command(0xe0);
           LCD_Data('t');
      }
-     //ºí·Ï¿şÀÌÆ® Á¤º¸ È®ÀÎ
+     //ë¸”ë¡ì›¨ì´íŠ¸ ì •ë³´ í™•ì¸
      else if(page == 8)
      {
           LCD_String(0X80, "BlWeight");
           LCD_DatatoHex2(0xc0, This_Block_Pos);
           LCD_DatatoDec(0xc5, BlockWeight[This_Block_Pos]);
      }
-     //ÃÖ´Ü°Å¸® °æ·Î Ç¥½Ã
+     //ìµœë‹¨ê±°ë¦¬ ê²½ë¡œ í‘œì‹œ
      else if(page == 9)
      {
           LCD_String(0X80, "FastLoad");
@@ -196,7 +196,7 @@ void LCD_Page_Viwe(unsigned char page)
           LCD_Command(0xe0);
           LCD_Data('t');
      }
-     //¸ğÅÍ on off Ç¥½Ã
+     //ëª¨í„° on off í‘œì‹œ
      else if(page == 10)
      {
           LCD_String(0X80, "MotPower");
@@ -209,44 +209,44 @@ void LCD_Page_Viwe(unsigned char page)
                LCD_String(0Xc0, " Now ON!");
           }
      }
-     //90µµ ÅÏ ¸®¹ÌÆ® °ª Ç¥½Ã
+     //90ë„ í„´ ë¦¬ë¯¸íŠ¸ ê°’ í‘œì‹œ
      else if(page == 11)
      {
           LCD_String(0X80, "T90Limit");
           LCD_DatatoDec(0xc3, Turn_90Limit);
      }
-     //180µµ ÅÏ ¸®¹ÌÆ® °ª Ç¥½Ã
+     //180ë„ í„´ ë¦¬ë¯¸íŠ¸ ê°’ í‘œì‹œ
      else if(page == 12)
      {
           LCD_String(0X80, "T180Limit");
           LCD_DatatoDec(0xc3, Turn_180Limit);
      }
-     //¿ŞÂÊ 90µµ ÅÏ ÁÂ¿ì¼¾¼­ ºñ±³ ¿ÀÇÁ¼Â
+     //ì™¼ìª½ 90ë„ í„´ ì¢Œìš°ì„¼ì„œ ë¹„êµ ì˜¤í”„ì…‹
      else if(page == 13)
      {
           LCD_String(0X80, "LT90_Off");
           LCD_DatatoDec(0xc3, L90Tn_Offset);     
      }
-     //¿À¸¥ÂÊ 90µµ ÅÏ ÁÂ¿ì¼¾¼­ ºñ±³ ¿ÀÇÁ¼Â
+     //ì˜¤ë¥¸ìª½ 90ë„ í„´ ì¢Œìš°ì„¼ì„œ ë¹„êµ ì˜¤í”„ì…‹
      else if(page == 14)
      {
           LCD_String(0X80, "RT90_Off");
           LCD_DatatoDec(0xc3, R90Tn_Offset);
      }
-     //Àü¹æ º® °¨Áö½Ã Á¤Áö¼³Á¤ °ª Ç¥½Ã
+     //ì „ë°© ë²½ ê°ì§€ì‹œ ì •ì§€ì„¤ì • ê°’ í‘œì‹œ
      else if(page ==15)
      {
           LCD_String(0X80, "FWallChk");
           LCD_DatatoDec(0xc3, FWall_Chk_Offset);
      }
-     //¿ŞÂÊ¸ğÅÍ ½ºÇÇµå ¸®¹ÌÆ® °ª Ç¥½Ã
+     //ì™¼ìª½ëª¨í„° ìŠ¤í”¼ë“œ ë¦¬ë¯¸íŠ¸ ê°’ í‘œì‹œ
      else if(page == 16)
      {
           LCD_String(0X80, "LM Speed");
           LCD_String(0Xc0, "Lmt->");
           LCD_DatatoDec(0xc5, LM_Spd_Limit);
      }
-     //¿À¸¥ÂÊ ¸ğÅÍ ½ºÇÇµå ¸®¹ÌÆ® °ª Ç¥½Ã
+     //ì˜¤ë¥¸ìª½ ëª¨í„° ìŠ¤í”¼ë“œ ë¦¬ë¯¸íŠ¸ ê°’ í‘œì‹œ
      else if(page == 17)
      {
           LCD_String(0X80, "RM Speed");
@@ -258,13 +258,13 @@ void LCD_Page_Viwe(unsigned char page)
 /////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////
-//		LCD¸¦ ÅëÇÑ µ¥ÀÌÅÍ º¯°æ ÇÔ¼ö
+//		LCDë¥¼ í†µí•œ ë°ì´í„° ë³€ê²½ í•¨ìˆ˜
 //-----------------------------------------------------------
 void Edit_Data_in_Lcd(unsigned char page, unsigned char UpDn)
 {
      if(page > 6)
      {
-          //¹Ì·ÎÁ¤º¸ È®ÀÎ
+          //ë¯¸ë¡œì •ë³´ í™•ì¸
           if(page==7)
           {
                if(UpDn == 0)
@@ -282,7 +282,7 @@ void Edit_Data_in_Lcd(unsigned char page, unsigned char UpDn)
                          This_Block_Pos &= 0x0F;
                }         
           }
-          //ºí·Ï ¿şÀÌÆ® È®ÀÎ¿ë
+          //ë¸”ë¡ ì›¨ì´íŠ¸ í™•ì¸ìš©
           else if(page==8)
           {
                if(UpDn == 0)
@@ -300,7 +300,7 @@ void Edit_Data_in_Lcd(unsigned char page, unsigned char UpDn)
                          This_Block_Pos &= 0x0F;
                }         
           }
-          //ÃÖ´Ü°æ·Î È®ÀÎ¿ë
+          //ìµœë‹¨ê²½ë¡œ í™•ì¸ìš©
           else if(page==9)
           {
                 if(UpDn == 0 && FastLoadIndex > 0)
@@ -308,24 +308,24 @@ void Edit_Data_in_Lcd(unsigned char page, unsigned char UpDn)
                 else if(UpDn == 1 && FastLoadIndex < 0xff)
                     FastLoadIndex++;
           }
-          //¸ğÅÍ on off ÄÁÆ®·Ñ
+          //ëª¨í„° on off ì»¨íŠ¸ë¡¤
           else if(page==10)
           {
                if((PINE & 0x08)== 0)
                {
                     Delay_ms(300);
                     MOTOR_ON();
-                    LMotor_Inturrupt_Enable();            //¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® Çã¿ë
-                    RMotor_Inturrupt_Enable();            //¿À¸¥ÂÊ ¸ğÅÍ ÀÎÅÍ·´Æ® Çã¿ë
+                    LMotor_Inturrupt_Enable();            //ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ í—ˆìš©
+                    RMotor_Inturrupt_Enable();            //ì˜¤ë¥¸ìª½ ëª¨í„° ì¸í„°ëŸ½íŠ¸ í—ˆìš©
                }
                else
                {
-                    LMotor_Inturrupt_Disable();            //¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® Çã¿ë
-                    RMotor_Inturrupt_Disable();            //¿À¸¥ÂÊ ¸ğÅÍ ÀÎÅÍ·´Æ® Çã¿ë
+                    LMotor_Inturrupt_Disable();            //ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ í—ˆìš©
+                    RMotor_Inturrupt_Disable();            //ì˜¤ë¥¸ìª½ ëª¨í„° ì¸í„°ëŸ½íŠ¸ í—ˆìš©
                     MOTOR_OFF();
                }
           }
-          //90µµ ÅÏ ¸®¹ÌÆ® °ª º¯°æ
+          //90ë„ í„´ ë¦¬ë¯¸íŠ¸ ê°’ ë³€ê²½
           else if(page==11)
           {
                if(UpDn == 0 && Turn_90Limit > 0)
@@ -333,7 +333,7 @@ void Edit_Data_in_Lcd(unsigned char page, unsigned char UpDn)
                else if(UpDn == 1 && Turn_90Limit < 255)
                     Turn_90Limit++;
           }
-          //180µµ ÅÏ ¸®¹ÌÆ® °ª º¯°æ
+          //180ë„ í„´ ë¦¬ë¯¸íŠ¸ ê°’ ë³€ê²½
           else if(page==12)
           {
                if(UpDn == 0 && Turn_180Limit > 0)
@@ -341,7 +341,7 @@ void Edit_Data_in_Lcd(unsigned char page, unsigned char UpDn)
                else if(UpDn == 1 && Turn_180Limit < 255)
                     Turn_180Limit++;
           }
-          //¿ŞÂÊ 90µµ ÅÏ ¿ÀÇÁ¼Â°ª Á¶Á¤
+          //ì™¼ìª½ 90ë„ í„´ ì˜¤í”„ì…‹ê°’ ì¡°ì •
           else if(page==13)
           {
                if(UpDn == 0 && L90Tn_Offset > 0)
@@ -349,7 +349,7 @@ void Edit_Data_in_Lcd(unsigned char page, unsigned char UpDn)
                else if(UpDn == 1 && L90Tn_Offset < 255)
                     L90Tn_Offset++;
           }
-          //¿À¸¥ÂÊ 90µµ ÅÏ ¿ÀÇÁ¼Â°ª Á¶Á¤
+          //ì˜¤ë¥¸ìª½ 90ë„ í„´ ì˜¤í”„ì…‹ê°’ ì¡°ì •
           else if(page==14)
           {
                if(UpDn == 0 && R90Tn_Offset > 0)
@@ -357,7 +357,7 @@ void Edit_Data_in_Lcd(unsigned char page, unsigned char UpDn)
                else if(UpDn == 1 && R90Tn_Offset < 255)
                     R90Tn_Offset++;
           }
-          //Àü¹æ º®Ã¼Å©ÈÄ Á¤Áö ¿ÀÇÁ¼Â °ª Á¶Á¤
+          //ì „ë°© ë²½ì²´í¬í›„ ì •ì§€ ì˜¤í”„ì…‹ ê°’ ì¡°ì •
           else if(page==15)
           {
                if(UpDn == 0 && FWall_Chk_Offset > 0)
@@ -365,7 +365,7 @@ void Edit_Data_in_Lcd(unsigned char page, unsigned char UpDn)
                else if(UpDn == 1 && FWall_Chk_Offset < 255)
                     FWall_Chk_Offset++;
           }
-          //¿ŞÂÊ¸ğÅÍ ½ºÇÇµå ¸®¹ÌÆ® °ª Á¶Á¤
+          //ì™¼ìª½ëª¨í„° ìŠ¤í”¼ë“œ ë¦¬ë¯¸íŠ¸ ê°’ ì¡°ì •
           else if(page==16)
           {
                if(UpDn == 0 && LM_Spd_Limit > 0)
@@ -373,7 +373,7 @@ void Edit_Data_in_Lcd(unsigned char page, unsigned char UpDn)
                else if(UpDn == 1 && LM_Spd_Limit < 255)
                     LM_Spd_Limit++;
           }
-          //¿À¸¥ÂÊ ¸ğÅÍ ½ºÇÇµå ¸®¹ÌÆ® °ª Á¶Á¤
+          //ì˜¤ë¥¸ìª½ ëª¨í„° ìŠ¤í”¼ë“œ ë¦¬ë¯¸íŠ¸ ê°’ ì¡°ì •
           else if(page==17)
           {
                if(UpDn == 0 && RM_Spd_Limit > 0)
@@ -387,7 +387,7 @@ void Edit_Data_in_Lcd(unsigned char page, unsigned char UpDn)
 /////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////
-//		ÃÖ´Ü°Å¸® Å½»ö ÇÔ¼ö
+//		ìµœë‹¨ê±°ë¦¬ íƒìƒ‰ í•¨ìˆ˜
 //-----------------------------------------------------------
 void FindFastLoad(unsigned char pos)
 {
@@ -398,22 +398,22 @@ void FindFastLoad(unsigned char pos)
       
      for(j=0; j<256; j++)
      {
-          BlockWeight[j]=0xff;     //¸ğµç ºí·Ï ¿şÀÌÆ® ÃÊ±âÈ­
+          BlockWeight[j]=0xff;     //ëª¨ë“  ë¸”ë¡ ì›¨ì´íŠ¸ ì´ˆê¸°í™”
      }
 
      LCD_String(0X80, "Updating");
      LCD_String(0XC0, "BlWeight");
     
-     //¿ì¼± ¸ğµç ºí·ÏÀÇ °ñ·ÎºÎÅÍÀÇ °Å¸®¿şÀÌÆ®¸¦ ¸¸µç´Ù
-     //¸ÇÃ³À½ ½ÃÀÛÇÒ À§Ä¡°¡ °ñÁöÁ¡ÀÌ¹Ç·Î Å¥¿¡ Áı¾î³Ö´Â´Ù
+     //ìš°ì„  ëª¨ë“  ë¸”ë¡ì˜ ê³¨ë¡œë¶€í„°ì˜ ê±°ë¦¬ì›¨ì´íŠ¸ë¥¼ ë§Œë“ ë‹¤
+     //ë§¨ì²˜ìŒ ì‹œì‘í•  ìœ„ì¹˜ê°€ ê³¨ì§€ì ì´ë¯€ë¡œ íì— ì§‘ì–´ë„£ëŠ”ë‹¤
      BlockQueue[0] = pos;
      BlockWeight[pos] = 0;
      for( ; head != tail ; )
      {
           pos = BlockQueue[tail++];
           Weight = BlockWeight[pos];
-          //ÇöÁ¦±âÁØ ºí·ÏÀÇ »ó, ÇÏ, ÁÂ, ¿ìÃø¿¡ º®ÀÌ ¾ø°í, ¿şÀÌÆ®°ªÀÌ ´õ Å©¸é Å¥¿¡ Áı¾î ³Ö°í ¿şÀÌÆ®¸¦ °»½Å
-          //À§ÂÊ ºí·Ï °Ë»ç
+          //í˜„ì œê¸°ì¤€ ë¸”ë¡ì˜ ìƒ, í•˜, ì¢Œ, ìš°ì¸¡ì— ë²½ì´ ì—†ê³ , ì›¨ì´íŠ¸ê°’ì´ ë” í¬ë©´ íì— ì§‘ì–´ ë„£ê³  ì›¨ì´íŠ¸ë¥¼ ê°±ì‹ 
+          //ìœ„ìª½ ë¸”ë¡ ê²€ì‚¬
           if((Maze_Info[pos]&0x01)!=0x01)
           {
                if(BlockWeight[pos+0x10] > Weight + 1)
@@ -422,7 +422,7 @@ void FindFastLoad(unsigned char pos)
                     BlockWeight[pos+0x10] = Weight + 1;
                }
           }
-          //¿ìÃø ºí·Ï °Ë»ç
+          //ìš°ì¸¡ ë¸”ë¡ ê²€ì‚¬
           if((Maze_Info[pos]&0x02)!=0x02)
           {
                if(BlockWeight[pos+0x01] > Weight+1)
@@ -431,7 +431,7 @@ void FindFastLoad(unsigned char pos)
                     BlockWeight[pos+0x01] = Weight + 1;
                }
           }
-          //¾Æ·¡ÂÊ ºí·Ï °Ë»ç
+          //ì•„ë˜ìª½ ë¸”ë¡ ê²€ì‚¬
           if((Maze_Info[pos]&0x04)!=0x04)
           {
                if(BlockWeight[pos-0x10] > Weight+1)
@@ -440,7 +440,7 @@ void FindFastLoad(unsigned char pos)
                     BlockWeight[pos-0x10] = Weight + 1;
                }
           }
-          //ÁÂÃø ºí·Ï °Ë»ç
+          //ì¢Œì¸¡ ë¸”ë¡ ê²€ì‚¬
           if((Maze_Info[pos]&0x08)!=0x08)
           {
                if(BlockWeight[pos-0x01] > Weight+1)
@@ -451,10 +451,10 @@ void FindFastLoad(unsigned char pos)
           }
      }
 
-    	//¹Ì·ÎÁ¤º¸ ÃÊ±âÈ­
+    	//ë¯¸ë¡œì •ë³´ ì´ˆê¸°í™”
      LCD_String(0X80, " Search ");
      LCD_String(0XC0, "FastLoad");
-      //ºü¸¥±æ Å½»öÇØ¼­ ¹è¿­¿¡ ÀúÀåÇÏ±â
+      //ë¹ ë¥¸ê¸¸ íƒìƒ‰í•´ì„œ ë°°ì—´ì— ì €ì¥í•˜ê¸°
    	pos = This_Block_Pos;
    	Weight = BlockWeight[pos];
    	tmp_Dir=This_Dir >> 4;
@@ -467,7 +467,7 @@ void FindFastLoad(unsigned char pos)
    	     //LCD_DatatoHex2(0xc4, tmp_Dir);
    	     //Delay_ms(1500);
           FastLoad[head] = 0;
-   	     //¿ì¼± ÁøÇà¹æÇâÀ¸·Î °Ë»ç
+   	     //ìš°ì„  ì§„í–‰ë°©í–¥ìœ¼ë¡œ ê²€ì‚¬
    	     if((Maze_Info[pos] & tmp_Dir)==0)
    	     {
    	          if(tmp_Dir==0x01)
@@ -542,7 +542,7 @@ void FindFastLoad(unsigned char pos)
    	     
    	     Weight = BlockWeight[pos];
    	}
-   	//¸¶Áö¸· °ñÇ¥½Ã¸¦ ÇÑ´Ù.
+   	//ë§ˆì§€ë§‰ ê³¨í‘œì‹œë¥¼ í•œë‹¤.
    	FastLoad[head]=0xf0;
 	FastLoadIndex = 0;
      LCD_String(0X80, "FastLoad");
@@ -551,11 +551,11 @@ void FindFastLoad(unsigned char pos)
 /////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////
-//		º®Á¤º¸ ¾÷µ¥ÀÌÆ® ÇÔ¼ö
+//		ë²½ì •ë³´ ì—…ë°ì´íŠ¸ í•¨ìˆ˜
 //-----------------------------------------------------------
 void UpdateWallInfo(void)
 {
-	//ÇöÁ¦ ºí·ÏÀÇ ÁÂ¿ìÃø º®Á¤º¸¸¦ °»½Å
+	//í˜„ì œ ë¸”ë¡ì˜ ì¢Œìš°ì¸¡ ë²½ì •ë³´ë¥¼ ê°±ì‹ 
 	if((Sensor_data[0] >= LS_LOW) && (Sensor_data[1] >= LC_LOW))
      {
      	if(This_Dir == NORTH && (This_Block_Pos & 0x0f) != 0x00)
@@ -629,14 +629,14 @@ void UpdateWallInfo(void)
 /////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////
-//		È¸Àü¼³Á¤
+//		íšŒì „ì„¤ì •
 //----------------------------------------------------------
 void NormalTurnInit(void)
 {
-	LMotor_Inturrupt_Disable();            //¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
-	RMotor_Inturrupt_Disable();            //¿À¸¥ÂÊ ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
+	LMotor_Inturrupt_Disable();            //ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
+	RMotor_Inturrupt_Disable();            //ì˜¤ë¥¸ìª½ ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
 	Delay_ms(1000);
-	//ÃÖ´Ü°Å¸® ¹æÇâÀ¸·Î È¸Àü¼³Á¤
+	//ìµœë‹¨ê±°ë¦¬ ë°©í–¥ìœ¼ë¡œ íšŒì „ì„¤ì •
 	if(This_Dir == NORTH)
 	{    
 		if(FastLoad[FastLoadIndex] == EAST)
@@ -650,7 +650,7 @@ void NormalTurnInit(void)
 			LM_FORWARD_GO();
 			RM_BACKWARD_GO();
 			if(Sensor_data[0] > LS_LOW && Sensor_data[5] > RS_LOW)
-				Turn_Limit = Turn_180Limit;//-10;    //ÁÂ¿ìÃø º®ÀÌ ÀÖÀ»¶§ ÅÏÀ» ÇÏ´Â °æ¿ì
+				Turn_Limit = Turn_180Limit;//-10;    //ì¢Œìš°ì¸¡ ë²½ì´ ìˆì„ë•Œ í„´ì„ í•˜ëŠ” ê²½ìš°
 			else
 				Turn_Limit = Turn_180Limit;
 		}
@@ -674,7 +674,7 @@ void NormalTurnInit(void)
 			LM_FORWARD_GO();
 			RM_BACKWARD_GO();
 			if(Sensor_data[0] > LS_LOW && Sensor_data[5] > RS_LOW)
-				Turn_Limit = Turn_180Limit;//-10;    //ÁÂ¿ìÃø º®ÀÌ ÀÖÀ»¶§ ÅÏÀ» ÇÏ´Â °æ¿ì
+				Turn_Limit = Turn_180Limit;//-10;    //ì¢Œìš°ì¸¡ ë²½ì´ ìˆì„ë•Œ í„´ì„ í•˜ëŠ” ê²½ìš°
 			else
 				Turn_Limit = Turn_180Limit;
 		}
@@ -698,7 +698,7 @@ void NormalTurnInit(void)
 			LM_FORWARD_GO();
 			RM_BACKWARD_GO();
 			if(Sensor_data[0] > LS_LOW && Sensor_data[5] > RS_LOW)
-				Turn_Limit = Turn_180Limit;//-10;    //ÁÂ¿ìÃø º®ÀÌ ÀÖÀ»¶§ ÅÏÀ» ÇÏ´Â °æ¿ì
+				Turn_Limit = Turn_180Limit;//-10;    //ì¢Œìš°ì¸¡ ë²½ì´ ìˆì„ë•Œ í„´ì„ í•˜ëŠ” ê²½ìš°
 			else 
 				Turn_Limit = Turn_180Limit;
 		}
@@ -722,7 +722,7 @@ void NormalTurnInit(void)
 			LM_FORWARD_GO();
 			RM_BACKWARD_GO();
 			if(Sensor_data[0] > LS_LOW && Sensor_data[5] > RS_LOW)
-				Turn_Limit = Turn_180Limit;//-10;    //ÁÂ¿ìÃø º®ÀÌ ÀÖÀ»¶§ ÅÏÀ» ÇÏ´Â °æ¿ì
+				Turn_Limit = Turn_180Limit;//-10;    //ì¢Œìš°ì¸¡ ë²½ì´ ìˆì„ë•Œ í„´ì„ í•˜ëŠ” ê²½ìš°
 			else
 				Turn_Limit = Turn_180Limit;
 		}
@@ -738,18 +738,18 @@ void NormalTurnInit(void)
 	LM_Spd_Limit = 200;
 	RM_Spd_Limit = 200;
 	Mot_TnStep_Cnt = 1;
-	//È¸Àü½ÃÀÛ
-     LMotor_Inturrupt_Enable();            //¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® Çã¿ë
-	RMotor_Inturrupt_Enable();            //¿À¸¥ÂÊ ¸ğÅÍ ÀÎÅÍ·´Æ® Çã¿ë
+	//íšŒì „ì‹œì‘
+     LMotor_Inturrupt_Enable();            //ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ í—ˆìš©
+	RMotor_Inturrupt_Enable();            //ì˜¤ë¥¸ìª½ ëª¨í„° ì¸í„°ëŸ½íŠ¸ í—ˆìš©
 }
 /////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////
-//		Á÷Áø½Ã ÀÚ¼¼Á¦¾î ÇÔ¼ö
+//		ì§ì§„ì‹œ ìì„¸ì œì–´ í•¨ìˆ˜
 //----------------------------------------------------------
 void Mouse_Posture_CTR(void)
 {
-     //º®ÀÌ °¨Áö¾ÈµÇ¸é ÁøÇàÇÏ¸é¼­ ÀÚ¼¼º¸Á¤À» ÇÏ°í
+     //ë²½ì´ ê°ì§€ì•ˆë˜ë©´ ì§„í–‰í•˜ë©´ì„œ ìì„¸ë³´ì •ì„ í•˜ê³ 
 	if(Sensor_data[1] > 45)
 	{
 	     LM_Spd_Limit =100-(Sensor_data[1]-45)/2;
@@ -769,7 +769,7 @@ void Mouse_Posture_CTR(void)
 /////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////
-//		¸ŞÀÎ½ÃÀÛ
+//		ë©”ì¸ì‹œì‘
 //----------------------------------------------------------
 int main(void)
 { 
@@ -777,16 +777,16 @@ int main(void)
      unsigned int tmp;
      unsigned int  i;
      
-     MIEXER_Initialize();                  //ÃÊ±âÈ­
-     USART0_Initialize();                  //Åë½Å ÃÊ±âÈ­
+     MIEXER_Initialize();                  //ì´ˆê¸°í™”
+     USART0_Initialize();                  //í†µì‹  ì´ˆê¸°í™”
      EXINT_Initialize();
      Sensor_Initialize();
      
-     Motor_GAL_Tri_Initialize();           //¸ğÅÍ Æ®¸®°Å¿ë GAL ÃÊ±âÈ­
-     Motor_Initialize();                   //¸ğÅÍ ÃÊ±âÈ­
+     Motor_GAL_Tri_Initialize();           //ëª¨í„° íŠ¸ë¦¬ê±°ìš© GAL ì´ˆê¸°í™”
+     Motor_Initialize();                   //ëª¨í„° ì´ˆê¸°í™”
      MOTOR_OFF();
-     LMotor_Inturrupt_Disable();            //¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
-     RMotor_Inturrupt_Disable();            //¿À¸¥ÂÊ ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
+     LMotor_Inturrupt_Disable();            //ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
+     RMotor_Inturrupt_Disable();            //ì˜¤ë¥¸ìª½ ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
      
      Delay_ms(500);
      LCD_Initialize();
@@ -794,33 +794,33 @@ int main(void)
      LCD_String(0X80, "-MIEXER-");
      LCD_String(0XC0, "Start!!!");
      
-     //¹Ì·ÎÁ¤º¸ ÃÊ±âÈ­
+     //ë¯¸ë¡œì •ë³´ ì´ˆê¸°í™”
      LCD_String(0X80, "-MIEXER-");
      LCD_String(0XC0, "MazeInit");
      
-     //¹Ì·ÎÁ¤º¸ ÃÊ±âÈ­
+     //ë¯¸ë¡œì •ë³´ ì´ˆê¸°í™”
      for(i=0; i<256; i++)
      {
-          Maze_Info[i]=0x00;            //±âº»ÀûÀ¸·Î 0À¸·Î ÃÊ±âÈ­
+          Maze_Info[i]=0x00;            //ê¸°ë³¸ì ìœ¼ë¡œ 0ìœ¼ë¡œ ì´ˆê¸°í™”
           if((i&0x0f)==0x00)
-               Maze_Info[i] |= 0x08;  //¿ŞÂÊÅ×µÎ¸®
+               Maze_Info[i] |= 0x08;  //ì™¼ìª½í…Œë‘ë¦¬
           if((i&0x0f)==0x0f)
-               Maze_Info[i] |= 0x02;  //¿À¸¥ÂÊÅ×µÎ¸®
+               Maze_Info[i] |= 0x02;  //ì˜¤ë¥¸ìª½í…Œë‘ë¦¬
           if((i&0xf0)==0x00)
-               Maze_Info[i] |= 0x04;  //¾Æ·¡ÂÊ Å×µÎ¸®
+               Maze_Info[i] |= 0x04;  //ì•„ë˜ìª½ í…Œë‘ë¦¬
           if((i&0xf0)==0xf0)
-               Maze_Info[i] |= 0x01;  //À§ÂÊ Å×µÎ¸®
+               Maze_Info[i] |= 0x01;  //ìœ„ìª½ í…Œë‘ë¦¬
      }
        
-     this_speed = _LPM(&ACC_TBL[0]);       //¸ğÅÍ ±¸µ¿½ÃÀÛ ¼Óµµ°ª ÀúÀå
+     this_speed = _LPM(&ACC_TBL[0]);       //ëª¨í„° êµ¬ë™ì‹œì‘ ì†ë„ê°’ ì €ì¥
   
-     LM_THIS_SPD(this_speed);              //¿ŞÂÊ¸ğÅÍ ÃÊ±â¼Óµµ ¼³Á¤
-     RM_THIS_SPD(this_speed);              //¿À¸¥ÂÊ¸ğÅÍ ÃÊ±â¼Óµµ ¼³Á¤
+     LM_THIS_SPD(this_speed);              //ì™¼ìª½ëª¨í„° ì´ˆê¸°ì†ë„ ì„¤ì •
+     RM_THIS_SPD(this_speed);              //ì˜¤ë¥¸ìª½ëª¨í„° ì´ˆê¸°ì†ë„ ì„¤ì •
   
-     SEI();                              //±Û·Î¹ú ÀÎÅÍ·´Æ® Çã¿ë
+     SEI();                              //ê¸€ë¡œë²Œ ì¸í„°ëŸ½íŠ¸ í—ˆìš©
      Delay_ms(1000);
      
-     //¼¾¼­°ªÀÌ Á¦´ë·Î µé¾î¿À´ÂÁö °Ë»ç
+     //ì„¼ì„œê°’ì´ ì œëŒ€ë¡œ ë“¤ì–´ì˜¤ëŠ”ì§€ ê²€ì‚¬
      for(i=0; i<6; i++)
      {
           if(Sensor_data[i] > 1)
@@ -835,16 +835,16 @@ int main(void)
                for(;;);
           }
      }
-  	//º®Á¤º¸ °»½Å
+  	//ë²½ì •ë³´ ê°±ì‹ 
      UpdateWallInfo();
      
-     //ÃÖ´Ü°Å¸® »ı¼º
+     //ìµœë‹¨ê±°ë¦¬ ìƒì„±
      FindFastLoad(Goal_Block_Pos[0]);
      
      LM_FORWARD_GO();
      RM_FORWARD_GO();
    
-   	//¸¶¿ì½º ÃÖÃÊ³õÀÎ ºí·Ï¿¡ ¹æÇâ ±â·Ï
+   	//ë§ˆìš°ìŠ¤ ìµœì´ˆë†“ì¸ ë¸”ë¡ì— ë°©í–¥ ê¸°ë¡
    	Maze_Info[This_Block_Pos] &= 0x0f;
 	Maze_Info[This_Block_Pos] |= This_Dir; 
 	
@@ -856,67 +856,67 @@ int main(void)
      //Start Main Loop
      for(;;)
      {
-         //LCD ¼¾¼­Á¤º¸ ¾÷µ¥ÀÌÆ®¸¦ À§ÇÑ.
+         //LCD ì„¼ì„œì •ë³´ ì—…ë°ì´íŠ¸ë¥¼ ìœ„í•œ.
           //if(num_cnt % 50 == 0)
           //{
               LCD_Page_Viwe(LCD_Page_Num);
           //}
-          //¸¶¿ì½º ¹æÇâ°ú ÁøÇàÇÒ ¹æÇâÀÌ °°³ª?
+          //ë§ˆìš°ìŠ¤ ë°©í–¥ê³¼ ì§„í–‰í•  ë°©í–¥ì´ ê°™ë‚˜?
      	if(This_Dir == FastLoad[FastLoadIndex])
      	{
-          	//ÇöÀç ÁøÇàÇÒ ¹æÇâ°ú ´ÙÀ½ ºí·Ï¿¡¼­ÀÇ ÁøÇà¹æÇâ°ú °°³ª?
+          	//í˜„ì¬ ì§„í–‰í•  ë°©í–¥ê³¼ ë‹¤ìŒ ë¸”ë¡ì—ì„œì˜ ì§„í–‰ë°©í–¥ê³¼ ê°™ë‚˜?
      		if((FastLoad[FastLoadIndex] == FastLoad[FastLoadIndex+1]) || (FastLoad[FastLoadIndex+1] == 0xf0) )
      		{
-     			//¸¶¿ì½º ÀÌµ¿À» Çã¶ôÇÏ°í
-	     		LMotor_Inturrupt_Enable();            //¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® Çã¿ë
-			     RMotor_Inturrupt_Enable();            //¿À¸¥ÂÊ ¸ğÅÍ ÀÎÅÍ·´Æ® Çã¿ë
+     			//ë§ˆìš°ìŠ¤ ì´ë™ì„ í—ˆë½í•˜ê³ 
+	     		LMotor_Inturrupt_Enable();            //ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ í—ˆìš©
+			     RMotor_Inturrupt_Enable();            //ì˜¤ë¥¸ìª½ ëª¨í„° ì¸í„°ëŸ½íŠ¸ í—ˆìš©
 		          
-     			//1ºí·Ï ÀÌµ¿Çß³ª?
+     			//1ë¸”ë¡ ì´ë™í–ˆë‚˜?
      			for(tmp=0; tmp<(OneBlockCntStep * 2); )
 	     		{
-	     		     //ºí·ÏÀÇ Áß½É¿¡¼­ º®Á¤º¸¸¦ ¾÷µ¥ÀÌÆ® ÇÑ´Ù
+	     		     //ë¸”ë¡ì˜ ì¤‘ì‹¬ì—ì„œ ë²½ì •ë³´ë¥¼ ì—…ë°ì´íŠ¸ í•œë‹¤
 	     		     if(tmp==OneBlockCntStep)
 	     		          UpdateWallInfo();
 	     		          
-     				//ÁøÇà¹æÇâ¿¡ º®ÀÌ °¨ÁöµÇ³ª?
+     				//ì§„í–‰ë°©í–¥ì— ë²½ì´ ê°ì§€ë˜ë‚˜?
 					if((Sensor_data[2] > LF_LOW) && (Sensor_data[3] > RF_LOW))
 					{
-						//º®ÀÌ °¨ÁöµÇ¸é
-						//¼Óµµ¸¦ ÁÙÀÌ°í ·çÇÁ¸¦ ºüÁ® ³ª¿Â´Ù
+						//ë²½ì´ ê°ì§€ë˜ë©´
+						//ì†ë„ë¥¼ ì¤„ì´ê³  ë£¨í”„ë¥¼ ë¹ ì ¸ ë‚˜ì˜¨ë‹¤
 						LM_Spd_Limit = 249;
 						RM_Spd_Limit = 249;
 						break;
 					}
 					else
 					{
-						//º®ÀÌ °¨Áö¾ÈµÇ¸é ÁøÇàÇÏ¸é¼­ ÀÚ¼¼º¸Á¤À» ÇÏ°í
+						//ë²½ì´ ê°ì§€ì•ˆë˜ë©´ ì§„í–‰í•˜ë©´ì„œ ìì„¸ë³´ì •ì„ í•˜ê³ 
 						Mouse_Posture_CTR();
 					}
 					tmp = LMot_BlStep_Cnt+RMot_BlStep_Cnt;
 				}
 				if(tmp<(OneBlockCntStep * 2))
 				{
-					//Àü¹æ¿¡ º®ÀÌ ÀÖ¾úÀ¸¹Ç·Î
-					//ºí·ÏÀÇ Áß½É¿¡ ¿Ã¶§±îÁö ÁøÇàÇÑ´Ù
+					//ì „ë°©ì— ë²½ì´ ìˆì—ˆìœ¼ë¯€ë¡œ
+					//ë¸”ë¡ì˜ ì¤‘ì‹¬ì— ì˜¬ë•Œê¹Œì§€ ì§„í–‰í•œë‹¤
 					for( ;tmp < OneBlockCntStep; )
 					{
 						tmp = LMot_BlStep_Cnt+RMot_BlStep_Cnt;
 					}
-					//ºí·ÏÀÇ Áß¾Ó¿¡ ¿À¸é
-					//¸¶¿ì½º¸¦ Á¤ÁöÇÏ°í
-					LMotor_Inturrupt_Disable();            //¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
-					RMotor_Inturrupt_Disable();            //¿À¸¥ÂÊ ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
+					//ë¸”ë¡ì˜ ì¤‘ì•™ì— ì˜¤ë©´
+					//ë§ˆìš°ìŠ¤ë¥¼ ì •ì§€í•˜ê³ 
+					LMotor_Inturrupt_Disable();            //ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
+					RMotor_Inturrupt_Disable();            //ì˜¤ë¥¸ìª½ ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
 					Delay_ms(1000);
-					//º®Á¤º¸¸¦ °»½ÅÇÏ¸ç
+					//ë²½ì •ë³´ë¥¼ ê°±ì‹ í•˜ë©°
 					UpdateWallInfo();
 					
-					//»õ·Î¿î ÃÖ´Ü°æ·Î¸¦ Ã£´Â´Ù
+					//ìƒˆë¡œìš´ ìµœë‹¨ê²½ë¡œë¥¼ ì°¾ëŠ”ë‹¤
 					FindFastLoad(Goal_Block_Pos[0]);
 				}
 				else
 				{
-					//Àü¹æ¿¡ º®ÀÌ ¾øÀÌ 1ºí·Ï ÀÌµ¿ÇßÀ¸¹Ç·Î
-					//ÇöÀç ¸¶¿ì½º À§Ä¡¸¦ °»½ÅÇÏ°í
+					//ì „ë°©ì— ë²½ì´ ì—†ì´ 1ë¸”ë¡ ì´ë™í–ˆìœ¼ë¯€ë¡œ
+					//í˜„ì¬ ë§ˆìš°ìŠ¤ ìœ„ì¹˜ë¥¼ ê°±ì‹ í•˜ê³ 
 					if(This_Dir == NORTH)
 						This_Block_Pos += 0x10;
 					else if(This_Dir == EAST)
@@ -926,62 +926,62 @@ int main(void)
 					else if(This_Dir == WEST)
 						This_Block_Pos -= 0x01;
 						
-					//ÀÌÀüºí·Ï¿¡ ¸¶¿ì½º ÁøÇà ÈçÀûÀ» ³²±â°í
+					//ì´ì „ë¸”ë¡ì— ë§ˆìš°ìŠ¤ ì§„í–‰ í”ì ì„ ë‚¨ê¸°ê³ 
 					Maze_Info[This_Block_Pos] &= 0x0f;
 					Maze_Info[This_Block_Pos] |= This_Dir;   
 					
-					//º®Á¤º¸¸¦ °»½ÅÇÏ¸ç
+					//ë²½ì •ë³´ë¥¼ ê°±ì‹ í•˜ë©°
 					//UpdateWallInfo();
 					
-					//ÃÖ´Ü°æ·Î ÀúÀå¹è¿­ÀÇ ÂüÁ¶ ÀÎµ¦½º¸¦ Áõ°¡
+					//ìµœë‹¨ê²½ë¡œ ì €ì¥ë°°ì—´ì˜ ì°¸ì¡° ì¸ë±ìŠ¤ë¥¼ ì¦ê°€
 					FastLoadIndex++;
 					
 					LMot_BlStep_Cnt=0;
      				RMot_BlStep_Cnt=0;
-     				//LMotor_Inturrupt_Disable();            //¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
-					//RMotor_Inturrupt_Disable();            //¿À¸¥ÂÊ ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
+     				//LMotor_Inturrupt_Disable();            //ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
+					//RMotor_Inturrupt_Disable();            //ì˜¤ë¥¸ìª½ ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
      				//Delay_ms(1000);
-					//LMotor_Inturrupt_Enable();            //¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
+					//LMotor_Inturrupt_Enable();            //ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
 					//RMotor_Inturrupt_Enable();
 				}	
      		}
-     		//ÇöÀç ÁøÇàÇÒ ¹æÇâ°ú ´ÙÀ½ ÁøÇà¹æÇâÀÌ ´Ù¸£¸é
-     		//½º¹«½ºÅÏ ÇÒ ¼ö ÀÖÀ¸¹Ç·Î
+     		//í˜„ì¬ ì§„í–‰í•  ë°©í–¥ê³¼ ë‹¤ìŒ ì§„í–‰ë°©í–¥ì´ ë‹¤ë¥´ë©´
+     		//ìŠ¤ë¬´ìŠ¤í„´ í•  ìˆ˜ ìˆìœ¼ë¯€ë¡œ
      		else
      		{
-     			//¸¶¿ì½º ÀÌµ¿À» Çã¶ôÇÏ°í
-	     		LMotor_Inturrupt_Enable();            //¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® Çã¿ë
-			     RMotor_Inturrupt_Enable();            //¿À¸¥ÂÊ ¸ğÅÍ ÀÎÅÍ·´Æ® Çã¿ë
-     			//¿ì¼± ½º¹«½ºÅÏ ÇÏ±âÀü Àü¹æÀÇ º®ÀÌ °¨ÁöµÉ ¼ö 
-     			//¾ø´Â À§Ä¡¸é ÃøÁ¤ °¡´É À§Ä¡±îÁö ÁøÇàÇÑ´Ù
+     			//ë§ˆìš°ìŠ¤ ì´ë™ì„ í—ˆë½í•˜ê³ 
+	     		LMotor_Inturrupt_Enable();            //ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ í—ˆìš©
+			     RMotor_Inturrupt_Enable();            //ì˜¤ë¥¸ìª½ ëª¨í„° ì¸í„°ëŸ½íŠ¸ í—ˆìš©
+     			//ìš°ì„  ìŠ¤ë¬´ìŠ¤í„´ í•˜ê¸°ì „ ì „ë°©ì˜ ë²½ì´ ê°ì§€ë  ìˆ˜ 
+     			//ì—†ëŠ” ìœ„ì¹˜ë©´ ì¸¡ì • ê°€ëŠ¥ ìœ„ì¹˜ê¹Œì§€ ì§„í–‰í•œë‹¤
      			if((LMot_BlStep_Cnt + RMot_BlStep_Cnt)<100)
      			{
 	     			for(tmp=0;tmp <100;)
      				{
-     					//Á÷ÁøÀÌ¹Ç·Î ¿ª½Ã ÀÚ¼¼º¸Á¤À» ÇÏ°í
-     					//ÀÌµ¿ÇÏ¸é¼­ ¸¶¿ì½º ÀÚ¼¼µµ ¹Ù·Î Àâ°í
+     					//ì§ì§„ì´ë¯€ë¡œ ì—­ì‹œ ìì„¸ë³´ì •ì„ í•˜ê³ 
+     					//ì´ë™í•˜ë©´ì„œ ë§ˆìš°ìŠ¤ ìì„¸ë„ ë°”ë¡œ ì¡ê³ 
      					Mouse_Posture_CTR();
 						tmp = LMot_BlStep_Cnt + RMot_BlStep_Cnt;
 					}
 				}
 								 		
-				//¼¾½ÌÀ§Ä¡¿¡ ¿ÔÀ¸¹Ç·Î Àü¹æ¿¡ º®ÀÌ ÀÖ³ª °Ë»ç
+				//ì„¼ì‹±ìœ„ì¹˜ì— ì™”ìœ¼ë¯€ë¡œ ì „ë°©ì— ë²½ì´ ìˆë‚˜ ê²€ì‚¬
 				if((Sensor_data[2] < LF_LOW) && (Sensor_data[3] < RF_LOW))
 				{
-					//Àü¹æ¿¡ º®ÀÌ ¾øÀ¸¹Ç·Î ½º¹«½ºÅÏ °¡´É
-					//¿ì¼± ÅÏ°¡´É ÁöÁ¡±îÁö ¾ÕÀ¸·Î ÀÌµ¿ÇÏ°í
+					//ì „ë°©ì— ë²½ì´ ì—†ìœ¼ë¯€ë¡œ ìŠ¤ë¬´ìŠ¤í„´ ê°€ëŠ¥
+					//ìš°ì„  í„´ê°€ëŠ¥ ì§€ì ê¹Œì§€ ì•ìœ¼ë¡œ ì´ë™í•˜ê³ 
 					for(tmp=0;tmp < 2;)
 					{
-						//½º¹«½ºÅÏ ¹æÇâÀÌ ÁÂÃøÅÏÀÌ¸é
+						//ìŠ¤ë¬´ìŠ¤í„´ ë°©í–¥ì´ ì¢Œì¸¡í„´ì´ë©´
 	     				if(((((This_Dir>>1) & 0x0f)<<4)|(This_Dir>>1)) == FastLoad[FastLoadIndex+1])
      					{
-     						//¿ì¼± ¿ìÃø ´ë°¢¼¾¼­°¡ °¨ÁöµÇ¸é ¸ğµå 1Áõ°¡
+     						//ìš°ì„  ìš°ì¸¡ ëŒ€ê°ì„¼ì„œê°€ ê°ì§€ë˜ë©´ ëª¨ë“œ 1ì¦ê°€
      						if(tmp==0 && (Sensor_data[1] > LC_LOW))
      							tmp++;
      						if(tmp==1 && (Sensor_data[0] > LS_LOW))
      							tmp++;
      					}
-     					//ÁÂÃøÅÏÀÌ ¾Æ´Ï¸é ¿ìÃøÅÏ
+     					//ì¢Œì¸¡í„´ì´ ì•„ë‹ˆë©´ ìš°ì¸¡í„´
      					else
      					{
      						if(tmp==0 && (Sensor_data[4] > RC_LOW))
@@ -989,19 +989,19 @@ int main(void)
      						if(tmp==1 && (Sensor_data[5] > RS_LOW))
      							tmp++;
      					}
-						//ÁøÇàÇÏ¸é¼­ ÀÚ¼¼º¸Á¤µµ ÇÏ°í
+						//ì§„í–‰í•˜ë©´ì„œ ìì„¸ë³´ì •ë„ í•˜ê³ 
 						Mouse_Posture_CTR();
      				}
-     				//ÅÏ°¡´É ¸ğµå°¡ µÇ¾úÀ¸¸é
-     				//ÅÏÇÒ ¹æÇâ¿¡ º®ÀÌ ÀÖ´ÂÁö °Ë»ç
+     				//í„´ê°€ëŠ¥ ëª¨ë“œê°€ ë˜ì—ˆìœ¼ë©´
+     				//í„´í•  ë°©í–¥ì— ë²½ì´ ìˆëŠ”ì§€ ê²€ì‚¬
      				for(tmp=0;tmp == 0;)
      				{
-     					//½º¹«½ºÅÏ ¹æÇâÀÌ ÁÂÃøÅÏÀÌ¸é
+     					//ìŠ¤ë¬´ìŠ¤í„´ ë°©í–¥ì´ ì¢Œì¸¡í„´ì´ë©´
 	     				if(((((This_Dir>>1) & 0x0f)<<4)|(This_Dir>>1)) == FastLoad[FastLoadIndex+1])
      					{
      						if(Sensor_data[1] < LC_LOW)
      						{
-     							//º®ÀÌ ¾øÀ¸¹Ç·Î ½º¹«½ºÅÏ °¡´É
+     							//ë²½ì´ ì—†ìœ¼ë¯€ë¡œ ìŠ¤ë¬´ìŠ¤í„´ ê°€ëŠ¥
      							tmp++;
      						}
      						else if((LMot_BlStep_Cnt + RMot_BlStep_Cnt)>(OneBlockCntStep * 2))
@@ -1013,7 +1013,7 @@ int main(void)
      					{
      						if(Sensor_data[4] < RC_LOW)
      						{
-     							//º®ÀÌ ¾øÀ¸¹Ç·Î
+     							//ë²½ì´ ì—†ìœ¼ë¯€ë¡œ
      							tmp++;
      						}
      						else if((LMot_BlStep_Cnt + RMot_BlStep_Cnt)>(OneBlockCntStep * 2))
@@ -1021,17 +1021,17 @@ int main(void)
      							tmp=2;
      						}
      					}
-     					//ÁøÇàÇÏ¸é¼­ ÀÚ¼¼º¸Á¤µµ ÇÏ°í
+     					//ì§„í–‰í•˜ë©´ì„œ ìì„¸ë³´ì •ë„ í•˜ê³ 
 						Mouse_Posture_CTR();
      				}
-     				//½º¹«½ºÅÏÀÌ¸é
+     				//ìŠ¤ë¬´ìŠ¤í„´ì´ë©´
      				if(tmp==1)
      				{
-     					//ºí·ÏÁ¤º¸¿¡ ÁøÇà ÈçÀûÀ» ³²±â°í
+     					//ë¸”ë¡ì •ë³´ì— ì§„í–‰ í”ì ì„ ë‚¨ê¸°ê³ 
 	     				Maze_Info[This_Block_Pos] &= 0x0f;
 						Maze_Info[This_Block_Pos] |= FastLoad[FastLoadIndex++];
 										
-     					//ÁÂÇ¥¸¦ °»½ÅÇÏ°í
+     					//ì¢Œí‘œë¥¼ ê°±ì‹ í•˜ê³ 
 	                    	if(This_Dir == NORTH)
 			     	     	This_Block_Pos += 0x10;
 	          			else if(This_Dir == EAST)
@@ -1043,22 +1043,22 @@ int main(void)
 				                    	
      					for(;;)
      					{
-	     					//ÅÏÁöÁ¡±îÁö ÀÌµ¿
+	     					//í„´ì§€ì ê¹Œì§€ ì´ë™
      						for(tmp=0;tmp==0;)
      						{
-     							//ÁÂÃøÅÏÀÏ¶§
+     							//ì¢Œì¸¡í„´ì¼ë•Œ
      							if(((((This_Dir>>1) & 0x0f)<<4)|(This_Dir>>1)) == FastLoad[FastLoadIndex])
      							{
      								if(Sensor_data[0] < LS_LOW)
      								{
-				          	          	//º®Á¤º¸¸¦ °»½Å
+				          	          	//ë²½ì •ë³´ë¥¼ ê°±ì‹ 
 	     								//UpdateWallInfo();
 										
-										//ºí·ÏÁ¤º¸¿¡ ÁøÇà ÈçÀûÀ» ³²±â°í
+										//ë¸”ë¡ì •ë³´ì— ì§„í–‰ í”ì ì„ ë‚¨ê¸°ê³ 
 	     								Maze_Info[This_Block_Pos] &= 0x0f;
 										Maze_Info[This_Block_Pos] |= FastLoad[FastLoadIndex];
 										
-	     								//ÃÖÁ¾ ÁÂÇ¥·Î ´Ù½Ã À§Ä¡¸¦ °»½ÅÇÏ°í
+	     								//ìµœì¢… ì¢Œí‘œë¡œ ë‹¤ì‹œ ìœ„ì¹˜ë¥¼ ê°±ì‹ í•˜ê³ 
 	          	          				if(This_Dir == NORTH)
 			     		               		This_Block_Pos -= 0x01;
           					          	else if(This_Dir == EAST)
@@ -1068,26 +1068,26 @@ int main(void)
                     						else if(This_Dir == WEST)
 				                    			This_Block_Pos -= 0x10;
 					                    			
-     									//ÅÏ½ÃÀÛ
+     									//í„´ì‹œì‘
      									LM_Sm_Tn_mode = 1;
                	     					RM_Sm_Tn_mode = 2;
      									tmp++;
      								}
      							}
-     							//¿ìÃøÅÏÀÏ¶§
+     							//ìš°ì¸¡í„´ì¼ë•Œ
 	     						else	
      							{
      								if(Sensor_data[5] < RS_LOW)
      								{
 					                    	
-					                    	//º®Á¤º¸¸¦ °»½Å
+					                    	//ë²½ì •ë³´ë¥¼ ê°±ì‹ 
 	     								//UpdateWallInfo();
 										
-										//ºí·ÏÁ¤º¸¿¡ ÁøÇà ÈçÀûÀ» ³²±â°í
+										//ë¸”ë¡ì •ë³´ì— ì§„í–‰ í”ì ì„ ë‚¨ê¸°ê³ 
 	     								Maze_Info[This_Block_Pos] &= 0x0f;
 										Maze_Info[This_Block_Pos] |= FastLoad[FastLoadIndex];
 							
-		     							//ÃÖÁ¾ ÁÂÇ¥·Î ´Ù½Ã À§Ä¡¸¦ °»½ÅÇÏ°í
+		     							//ìµœì¢… ì¢Œí‘œë¡œ ë‹¤ì‹œ ìœ„ì¹˜ë¥¼ ê°±ì‹ í•˜ê³ 
 		                    				if(This_Dir == NORTH)
 				     	               		This_Block_Pos += 0x01;
           					          	else if(This_Dir == EAST)
@@ -1097,23 +1097,23 @@ int main(void)
                     						else if(This_Dir == WEST)
 				                    			This_Block_Pos += 0x10;
 	     							
-     									//ÅÏ½ÃÀÛ
+     									//í„´ì‹œì‘
 	     								LM_Sm_Tn_mode = 2;
      	               					RM_Sm_Tn_mode = 1;
      									tmp++;
      								}
      							}
      						}
-     						//½º¹«½º ÅÏÀÌ ³¡³¯¶§±îÁö ´ë±â
+     						//ìŠ¤ë¬´ìŠ¤ í„´ì´ ëë‚ ë•Œê¹Œì§€ ëŒ€ê¸°
              					for(;tmp>0; )
 	              				{
      	      				     tmp = LM_Sm_Tn_mode+RM_Sm_Tn_mode;
           	   				}
 										
-          	   				//¸¶¿ì½º ¹æÇâÀ» °»½Å
+          	   				//ë§ˆìš°ìŠ¤ ë°©í–¥ì„ ê°±ì‹ 
           	   				This_Dir=FastLoad[FastLoadIndex++];
           	   				
-	          	          	//½º¹«½º ÅÏÀÌ ³¡³ª¸é ¿¬¼ÓÅÏÀÎÁö °Ë»ç
+	          	          	//ìŠ¤ë¬´ìŠ¤ í„´ì´ ëë‚˜ë©´ ì—°ì†í„´ì¸ì§€ ê²€ì‚¬
 	          	          	if(This_Dir==FastLoad[FastLoadIndex])
 	          	          	{
 	          	          		tmp=1;
@@ -1139,25 +1139,25 @@ int main(void)
      							}
      						}
 	                    	}
-	                    	//½º¹«½ºÅÏ ¸ğµå¸¦ ¹ş¾î³µÀ¸¸é Á÷ÁøÀÌ¹Ç·Î
-	                    	//¾çÂÊ¹ÙÄû ½ºÅÜÄ«¿îÆ® Á¶Á¤
+	                    	//ìŠ¤ë¬´ìŠ¤í„´ ëª¨ë“œë¥¼ ë²—ì–´ë‚¬ìœ¼ë©´ ì§ì§„ì´ë¯€ë¡œ
+	                    	//ì–‘ìª½ë°”í€´ ìŠ¤í…ì¹´ìš´íŠ¸ ì¡°ì •
 	                    	LMot_BlStep_Cnt=0;
 	                    	RMot_BlStep_Cnt=0;
 	                    		
-	                    	//º®ÀÌ ÀÖ¾î¼­ ÅÏÇÒ ¼ö ¾ø±â ¶§¹®¿¡ 
-	                    	//ºí·Ï Áß¾Ó±îÁö °£´Ù
+	                    	//ë²½ì´ ìˆì–´ì„œ í„´í•  ìˆ˜ ì—†ê¸° ë•Œë¬¸ì— 
+	                    	//ë¸”ë¡ ì¤‘ì•™ê¹Œì§€ ê°„ë‹¤
 	                    	if(tmp==2)
 	                    	{
-							//º®Á¤º¸¸¦ °»½ÅÇÏ¸ç
+							//ë²½ì •ë³´ë¥¼ ê°±ì‹ í•˜ë©°
 							UpdateWallInfo();
 						
-							//»õ·Î¿î ÃÖ´Ü°æ·Î¸¦ Ã£´Â´Ù
+							//ìƒˆë¡œìš´ ìµœë‹¨ê²½ë¡œë¥¼ ì°¾ëŠ”ë‹¤
 							FindFastLoad(Goal_Block_Pos[0]);
 							
-							//»õ·Î¿î °æ·Î¸¦ Ã£°í ÇöÀç ÁøÇà¹æÇâ°ú ¸¶¿ì½º ¹æÇâÀÌ ´Ù¸£¸é 
+							//ìƒˆë¡œìš´ ê²½ë¡œë¥¼ ì°¾ê³  í˜„ì¬ ì§„í–‰ë°©í–¥ê³¼ ë§ˆìš°ìŠ¤ ë°©í–¥ì´ ë‹¤ë¥´ë©´ 
 							if(This_Dir!=FastLoad[FastLoadIndex])
 							{
-							     //¿ì¼± ¼Óµµ¸¦ ³·Ãß°í
+							     //ìš°ì„  ì†ë„ë¥¼ ë‚®ì¶”ê³ 
      							LM_Spd_Limit = 249;
 	                             		RM_Spd_Limit = 249;
      	                              
@@ -1167,21 +1167,21 @@ int main(void)
 			     				{
 				     				tmp = LMot_BlStep_Cnt+RMot_BlStep_Cnt;
 					     		}
-						     	//ºí·ÏÀÇ Áß¾Ó¿¡ ¿ÔÀ¸¸é
-							     //¸¶¿ì½º¸¦ Á¤ÁöÇÏ°í
-     							LMotor_Inturrupt_Disable();            //¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
-	     						RMotor_Inturrupt_Disable();            //¿À¸¥ÂÊ ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
+						     	//ë¸”ë¡ì˜ ì¤‘ì•™ì— ì™”ìœ¼ë©´
+							     //ë§ˆìš°ìŠ¤ë¥¼ ì •ì§€í•˜ê³ 
+     							LMotor_Inturrupt_Disable();            //ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
+	     						RMotor_Inturrupt_Disable();            //ì˜¤ë¥¸ìª½ ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
 							
 							     Delay_ms(1000);
 					          }
 	                    	}	
      				}
-     				//Á¤Áö¸ğµåÀÌ¸é
+     				//ì •ì§€ëª¨ë“œì´ë©´
      				else if(tmp==2)
      				{
                          	LMot_BlStep_Cnt=0;
                          	RMot_BlStep_Cnt=0;
-                         	//ÇöÀç À§Ä¡¸¦ °»½ÅÇÏ°í
+                         	//í˜„ì¬ ìœ„ì¹˜ë¥¼ ê°±ì‹ í•˜ê³ 
 	                    	if(This_Dir == NORTH)
 			     	    		This_Block_Pos += 0x10;
 	                    	else if(This_Dir == EAST)
@@ -1194,15 +1194,15 @@ int main(void)
 			             	//LCD_String(0X80, "-MIEXER-");
      					//LCD_String(0XC0, "Stop!!!!");	
      					
-     					//º®Á¤º¸¸¦ °»½ÅÇÏ¸ç
+     					//ë²½ì •ë³´ë¥¼ ê°±ì‹ í•˜ë©°
 						UpdateWallInfo();
 						
-						//»õ·Î¿î ÃÖ´Ü°æ·Î¸¦ Ã£´Â´Ù
+						//ìƒˆë¡œìš´ ìµœë‹¨ê²½ë¡œë¥¼ ì°¾ëŠ”ë‹¤
 						FindFastLoad(Goal_Block_Pos[0]);
 						
 						if(This_Dir != FastLoad[FastLoadIndex])
 						{
-						     //¿ì¼± ¼Óµµ¸¦ ³·Ãß°í
+						     //ìš°ì„  ì†ë„ë¥¼ ë‚®ì¶”ê³ 
 						     LM_Spd_Limit = 249;
                          	     RM_Spd_Limit = 249;
                          	
@@ -1211,21 +1211,21 @@ int main(void)
 						     	tmp = LMot_BlStep_Cnt+RMot_BlStep_Cnt;
 						     }
 						
-					     	//ºí·ÏÀÇ Áß¾Ó¿¡ ¿ÔÀ¸¸é
-						     //¸¶¿ì½º¸¦ Á¤ÁöÇÏ°í
-						     LMotor_Inturrupt_Disable();            //¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
-						     RMotor_Inturrupt_Disable();            //¿À¸¥ÂÊ ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
+					     	//ë¸”ë¡ì˜ ì¤‘ì•™ì— ì™”ìœ¼ë©´
+						     //ë§ˆìš°ìŠ¤ë¥¼ ì •ì§€í•˜ê³ 
+						     LMotor_Inturrupt_Disable();            //ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
+						     RMotor_Inturrupt_Disable();            //ì˜¤ë¥¸ìª½ ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
 						
 						     Delay_ms(1000);
 				          }
      				}
 				}
-				//Àü¹æ¿¡ º®ÀÌ ÀÖ±â¶§¹®¿¡ ºí·Ï Áß½É±îÁö ÀÌµ¿ÈÄ Ã³¸®
+				//ì „ë°©ì— ë²½ì´ ìˆê¸°ë•Œë¬¸ì— ë¸”ë¡ ì¤‘ì‹¬ê¹Œì§€ ì´ë™í›„ ì²˜ë¦¬
 				else
 				{
 				     if(LMot_BlStep_Cnt+RMot_BlStep_Cnt < OneBlockCntStep)
 				     {
-	     				//¿ì¼± ¼Óµµ¸¦ ³·Ãß°í
+	     				//ìš°ì„  ì†ë„ë¥¼ ë‚®ì¶”ê³ 
 		     			LM_Spd_Limit = 249;
                               RM_Spd_Limit = 249;
                          
@@ -1234,15 +1234,15 @@ int main(void)
 						     tmp = LMot_BlStep_Cnt+RMot_BlStep_Cnt;
 					     }
 				     }
-					//ºí·ÏÀÇ Áß¾Ó¿¡ ¿ÔÀ¸¸é
-					//¸¶¿ì½º¸¦ Á¤ÁöÇÏ°í
-					LMotor_Inturrupt_Disable();            //¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
-					RMotor_Inturrupt_Disable();            //¿À¸¥ÂÊ ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
+					//ë¸”ë¡ì˜ ì¤‘ì•™ì— ì™”ìœ¼ë©´
+					//ë§ˆìš°ìŠ¤ë¥¼ ì •ì§€í•˜ê³ 
+					LMotor_Inturrupt_Disable();            //ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
+					RMotor_Inturrupt_Disable();            //ì˜¤ë¥¸ìª½ ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
 					
-					//º®Á¤º¸¸¦ °»½ÅÇÏ¸ç
+					//ë²½ì •ë³´ë¥¼ ê°±ì‹ í•˜ë©°
 					UpdateWallInfo();
 					
-					//»õ·Î¿î ÃÖ´Ü°æ·Î¸¦ Ã£´Â´Ù
+					//ìƒˆë¡œìš´ ìµœë‹¨ê²½ë¡œë¥¼ ì°¾ëŠ”ë‹¤
 					FindFastLoad(Goal_Block_Pos[0]);
 					
 					Delay_ms(1000);
@@ -1251,14 +1251,14 @@ int main(void)
      	}
           else
           {
-          	//ÇöÀç ¸¶¿ì½º ¹æÇâ°ú ÁøÇà¹æÇâÀÌ Æ²¸®¹Ç·Î
-          	//È¸ÀüÇÑ´Ù
-          	//Á¦ÀÚ¸® ÅÏÀ¸·Î ¼³Á¤ÇÏ°í
+          	//í˜„ì¬ ë§ˆìš°ìŠ¤ ë°©í–¥ê³¼ ì§„í–‰ë°©í–¥ì´ í‹€ë¦¬ë¯€ë¡œ
+          	//íšŒì „í•œë‹¤
+          	//ì œìë¦¬ í„´ìœ¼ë¡œ ì„¤ì •í•˜ê³ 
      		NormalTurnInit();
      		for(;Mot_TnStep_Cnt != 0;)
      		{
-     			//°è¼Ó ÅÏÀ»ÇÑ´Ù.
-     			//180µµ È¸ÀüÀÌ¸é¼­ ¾çÂÊ¿¡ º®ÀÌ ÀÖÀ»¶§
+     			//ê³„ì† í„´ì„í•œë‹¤.
+     			//180ë„ íšŒì „ì´ë©´ì„œ ì–‘ìª½ì— ë²½ì´ ìˆì„ë•Œ
 		     	if(Turn_Limit != Turn_180Limit && Turn_Limit > Turn_90Limit)
           		{
 		         		if((Mot_TnStep_Cnt >= Turn_Limit) && (Sensor_data[0]+Sensor_data[5] > 145) && (Sensor_data[1]+Sensor_data[4] > 80))
@@ -1266,7 +1266,7 @@ int main(void)
 		              		Mot_TnStep_Cnt = 0;
           	  		}
 		         	}
-          		//¾çÂÊ¿¡ º®ÀÌ ÇÏ³ª¶óµµ ¾øÀ»¶§
+          		//ì–‘ìª½ì— ë²½ì´ í•˜ë‚˜ë¼ë„ ì—†ì„ë•Œ
 		         	else
 		         	{
           			if(Mot_TnStep_Cnt >= Turn_Limit)
@@ -1275,9 +1275,9 @@ int main(void)
           	     	}
          			}
      		}
-     		//ÅÏÀÌ ³¡³ª¸é ¹æÇâÀ» °»½ÅÇÑ´Ù
-     		LMotor_Inturrupt_Disable();            //¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
-			RMotor_Inturrupt_Disable();            //¿À¸¥ÂÊ ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
+     		//í„´ì´ ëë‚˜ë©´ ë°©í–¥ì„ ê°±ì‹ í•œë‹¤
+     		LMotor_Inturrupt_Disable();            //ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
+			RMotor_Inturrupt_Disable();            //ì˜¤ë¥¸ìª½ ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
                Delay_ms(50);
 		     LM_FORWARD_GO();
           	RM_FORWARD_GO();
@@ -1290,7 +1290,7 @@ int main(void)
                This_Dir = FastLoad[FastLoadIndex];
 		     Maze_Info[This_Block_Pos] &= 0x0f;
           	Maze_Info[This_Block_Pos] |= This_Dir;
-               //LMotor_Inturrupt_Enable();            //¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
+               //LMotor_Inturrupt_Enable();            //ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
 		     //RMotor_Inturrupt_Enable(); 
           }
      }//End Main Loop     
@@ -1298,53 +1298,53 @@ int main(void)
 /////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////
-//    ½ºÀ§Ä¡ ÀÎÅÍ·´Æ® Ã³¸®·çÆ¾ ½ÃÀÛ
+//    ìŠ¤ìœ„ì¹˜ ì¸í„°ëŸ½íŠ¸ ì²˜ë¦¬ë£¨í‹´ ì‹œì‘
 //-----------------------------------------------------------------
 #pragma vector=INT4_vect
 __interrupt void SW_INT(void)
 {
   unsigned char sw_data;
-  sw_data = PINE & 0x60;                     //½ºÀ§Ä¡ Á¤º¸¸¸ ¹Ş´Â´Ù
-  if(sw_data == SW_RD)                       //¿À¸¥ÂÊ ¾Æ·¡¹öÆ° ´©¸¦¶§
+  sw_data = PINE & 0x60;                     //ìŠ¤ìœ„ì¹˜ ì •ë³´ë§Œ ë°›ëŠ”ë‹¤
+  if(sw_data == SW_RD)                       //ì˜¤ë¥¸ìª½ ì•„ë˜ë²„íŠ¼ ëˆ„ë¥¼ë•Œ
   {
-     if(LCD_Page_Num > 0)                    //LCDÃâ·Â ÆäÀÌÁö¸¦ ÀÌÀüÀ¸·Î
+     if(LCD_Page_Num > 0)                    //LCDì¶œë ¥ í˜ì´ì§€ë¥¼ ì´ì „ìœ¼ë¡œ
      {
        LCD_Page_Num--;  
        LCD_Page_Viwe(LCD_Page_Num); 
      }
   }
-  else if(sw_data == SW_RU)                  //¿À¸¥ÂÊ À§ ½ºÀ§Ä¡ ´©¸£¸é
+  else if(sw_data == SW_RU)                  //ì˜¤ë¥¸ìª½ ìœ„ ìŠ¤ìœ„ì¹˜ ëˆ„ë¥´ë©´
   {
      if(LCD_Page_Num  < Lcd_Page_Limit)
      {
-          LCD_Page_Num++;                    //LCDÆäÀÌÁö¸¦ ´ÙÀ½ÆäÀÌÁö·Î
+          LCD_Page_Num++;                    //LCDí˜ì´ì§€ë¥¼ ë‹¤ìŒí˜ì´ì§€ë¡œ
           LCD_Page_Viwe(LCD_Page_Num); 
      }
   }
-  else if(sw_data == SW_LD)                  //¿ŞÂÊ ¾Æ·¡¹öÆ° ´©¸£¸é 
+  else if(sw_data == SW_LD)                  //ì™¼ìª½ ì•„ë˜ë²„íŠ¼ ëˆ„ë¥´ë©´ 
   {
-     Edit_Data_in_Lcd(LCD_Page_Num, 0);      //ÇöÁ¦ LCD¿¡ Ãâ·ÂµÇ¾î ÀÖ´Â ÆäÀÌÁöµ¥ÀÌÅÍ°ª °¨¼Ò
+     Edit_Data_in_Lcd(LCD_Page_Num, 0);      //í˜„ì œ LCDì— ì¶œë ¥ë˜ì–´ ìˆëŠ” í˜ì´ì§€ë°ì´í„°ê°’ ê°ì†Œ
   }
-  else if(sw_data == SW_LU)                  //¿ŞÂÊ À§ ¹öÆ°À» ´©¸£¸é
+  else if(sw_data == SW_LU)                  //ì™¼ìª½ ìœ„ ë²„íŠ¼ì„ ëˆ„ë¥´ë©´
   {
-     Edit_Data_in_Lcd(LCD_Page_Num, 1);      //ÇöÁ¦ LCD¿¡ Ç¥½ÃµÈ ÆäÀÌÁö µ¥ÀÌÅÍ Áõ°¡
+     Edit_Data_in_Lcd(LCD_Page_Num, 1);      //í˜„ì œ LCDì— í‘œì‹œëœ í˜ì´ì§€ ë°ì´í„° ì¦ê°€
   }
 }
 ////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////
-//    ¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® Ã³¸®·çÆ¾ ½ÃÀÛ
+//    ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ ì²˜ë¦¬ë£¨í‹´ ì‹œì‘
 //-----------------------------------------------------------------
-#pragma vector=TIMER1_COMPA_vect         //¿ŞÂÊ¸ğÅÍ Å¸ÀÌ¸Ó ÀÎÅÍ·´Æ® Ã³¸®·çÆ¾
+#pragma vector=TIMER1_COMPA_vect         //ì™¼ìª½ëª¨í„° íƒ€ì´ë¨¸ ì¸í„°ëŸ½íŠ¸ ì²˜ë¦¬ë£¨í‹´
 __interrupt void LMotor_Int_A(void)
 {
      unsigned char this_speed;
   
-     LM_PULSE_CLR();                        //LMotor_Int_B ÀÎÅÍ·´Æ® ·çÆ¾¿¡¼­ ¸¸µç HighÆŞ½º¸¦ 100us ÈÄ¿¡ Low·Î ¸¸µç´Ù
+     LM_PULSE_CLR();                        //LMotor_Int_B ì¸í„°ëŸ½íŠ¸ ë£¨í‹´ì—ì„œ ë§Œë“  Highí„ìŠ¤ë¥¼ 100us í›„ì— Lowë¡œ ë§Œë“ ë‹¤
   
      if(LM_Sm_Tn_mode==1)
      {
-          this_speed = _LPM(&Sm_Tbl_In[LM_Smpd_index]);    //»õ·Î Àû¿ëÇÒ ¸ğÅÍ ¼Óµµ¸¦ ·Îµå
+          this_speed = _LPM(&Sm_Tbl_In[LM_Smpd_index]);    //ìƒˆë¡œ ì ìš©í•  ëª¨í„° ì†ë„ë¥¼ ë¡œë“œ
           if(LM_Smpd_index < 91)
           {
                LM_Smpd_index++;
@@ -1359,7 +1359,7 @@ __interrupt void LMotor_Int_A(void)
      }
      else if(LM_Sm_Tn_mode == 2)
      {
-          this_speed = _LPM(&Sm_Tbl_Out[LM_Smpd_index]);    //»õ·Î Àû¿ëÇÒ ¸ğÅÍ ¼Óµµ¸¦ ·Îµå
+          this_speed = _LPM(&Sm_Tbl_Out[LM_Smpd_index]);    //ìƒˆë¡œ ì ìš©í•  ëª¨í„° ì†ë„ë¥¼ ë¡œë“œ
           if(LM_Smpd_index < 243)
           {
                LM_Smpd_index++;
@@ -1373,15 +1373,15 @@ __interrupt void LMotor_Int_A(void)
      }
      else
      {
-          this_speed = _LPM(&ACC_TBL[LM_Spd_index]);    //»õ·Î Àû¿ëÇÒ ¸ğÅÍ ¼Óµµ¸¦ ·Îµå
+          this_speed = _LPM(&ACC_TBL[LM_Spd_index]);    //ìƒˆë¡œ ì ìš©í•  ëª¨í„° ì†ë„ë¥¼ ë¡œë“œ
     
-          if(this_speed > LM_Spd_Limit)         //ÇöÀç¼Óµµ & ¸ñÇ¥¼Óµµ ºñ±³
+          if(this_speed > LM_Spd_Limit)         //í˜„ì¬ì†ë„ & ëª©í‘œì†ë„ ë¹„êµ
           {
-               LM_Spd_index++;                     //¸ñÇ¥¼Óµµ ÃÊ°ú½Ã ¼Óµµ °¨¼Ò
+               LM_Spd_index++;                     //ëª©í‘œì†ë„ ì´ˆê³¼ì‹œ ì†ë„ ê°ì†Œ
           }
           else if(this_speed < LM_Spd_Limit)
           {
-               LM_Spd_index--;                     //¸ñÇ¥¼Óµµ ¹Ì´Ş½Ã ¼Óµµ Áõ°¡
+               LM_Spd_index--;                     //ëª©í‘œì†ë„ ë¯¸ë‹¬ì‹œ ì†ë„ ì¦ê°€
           }
   
      	LMot_BlStep_Cnt++;
@@ -1391,37 +1391,37 @@ __interrupt void LMotor_Int_A(void)
      		Mot_TnStep_Cnt++;
   		}
   		
-          this_speed = _LPM(&ACC_TBL[LM_Spd_index]);  //¼Óµµ Àû¿ë
+          this_speed = _LPM(&ACC_TBL[LM_Spd_index]);  //ì†ë„ ì ìš©
      }
      LM_Spd_Now = this_speed;
-     LM_THIS_SPD(this_speed);                    //´ÙÀ½¼Óµµ Àû¿ë
+     LM_THIS_SPD(this_speed);                    //ë‹¤ìŒì†ë„ ì ìš©
  
-     TCNT1H = 0x00;                              //Å¸ÀÌ¸Ó ½ÃÀÛ
+     TCNT1H = 0x00;                              //íƒ€ì´ë¨¸ ì‹œì‘
      TCNT1L = 0x00;
 }
 
 #pragma vector=TIMER1_COMPB_vect
 __interrupt void LMotor_Int_B(void)
 { 
-  LM_PULSE_SET();                           //¿ŞÂÊ¸ğÅÍ ¿ÂÅ¸ÀÓ ÆŞ½º  
+  LM_PULSE_SET();                           //ì™¼ìª½ëª¨í„° ì˜¨íƒ€ì„ í„ìŠ¤  
   
   //TX_Char('L');
 }
 ///////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////
-//    ¿À¸¥ÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® Ã³¸®·çÆ¾ ½ÃÀÛ
+//    ì˜¤ë¥¸ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ ì²˜ë¦¬ë£¨í‹´ ì‹œì‘
 //-----------------------------------------------------------------
-#pragma vector=TIMER3_COMPA_vect            //¿À¸¥ÂÊ ¸ğÅÍ Å¸ÀÌ¸Ó ÀÎÅÍ·´Æ® Ã³¸®·çÆ¾
+#pragma vector=TIMER3_COMPA_vect            //ì˜¤ë¥¸ìª½ ëª¨í„° íƒ€ì´ë¨¸ ì¸í„°ëŸ½íŠ¸ ì²˜ë¦¬ë£¨í‹´
 __interrupt void RMotor_Int_A(void)
 {
      unsigned char this_speed;
   
-     RM_PULSE_CLR();                            //RMotor_Int_B ÀÎÅÍ·´Æ® ·çÆ¾¿¡¼­ ¸¸µç HighÆŞ½º¸¦ 100us ÈÄ¿¡ Low·Î ¸¸µç´Ù
+     RM_PULSE_CLR();                            //RMotor_Int_B ì¸í„°ëŸ½íŠ¸ ë£¨í‹´ì—ì„œ ë§Œë“  Highí„ìŠ¤ë¥¼ 100us í›„ì— Lowë¡œ ë§Œë“ ë‹¤
      
      if(RM_Sm_Tn_mode==1)
      {
-          this_speed = _LPM(&Sm_Tbl_In[RM_Smpd_index]);    //»õ·Î Àû¿ëÇÒ ¸ğÅÍ ¼Óµµ¸¦ ·Îµå
+          this_speed = _LPM(&Sm_Tbl_In[RM_Smpd_index]);    //ìƒˆë¡œ ì ìš©í•  ëª¨í„° ì†ë„ë¥¼ ë¡œë“œ
           if(RM_Smpd_index < 91)
           {
                RM_Smpd_index++;
@@ -1436,7 +1436,7 @@ __interrupt void RMotor_Int_A(void)
      }
      else if(RM_Sm_Tn_mode == 2)
      {
-          this_speed = _LPM(&Sm_Tbl_Out[RM_Smpd_index]);    //»õ·Î Àû¿ëÇÒ ¸ğÅÍ ¼Óµµ¸¦ ·Îµå
+          this_speed = _LPM(&Sm_Tbl_Out[RM_Smpd_index]);    //ìƒˆë¡œ ì ìš©í•  ëª¨í„° ì†ë„ë¥¼ ë¡œë“œ
           if(RM_Smpd_index < 243)
           {
                RM_Smpd_index++;
@@ -1474,21 +1474,21 @@ __interrupt void RMotor_Int_A(void)
 #pragma vector=TIMER3_COMPB_vect
 __interrupt void RMotor_Int_B(void)
 {
-  RM_PULSE_SET();                               //¿À¸¥ÂÊ ¸ğÅÍ ¿ÂÅ¸ÀÓ ÆŞ½º 
+  RM_PULSE_SET();                               //ì˜¤ë¥¸ìª½ ëª¨í„° ì˜¨íƒ€ì„ í„ìŠ¤ 
   
   //TX_Char('R');
 }
 ////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////
-//    A/Dº¯È¯ ÀÎÅÍ·´Æ® Ã³¸®·çÆ¾ ½ÃÀÛ
+//    A/Dë³€í™˜ ì¸í„°ëŸ½íŠ¸ ì²˜ë¦¬ë£¨í‹´ ì‹œì‘
 //-----------------------------------------------------------------
 #pragma vector=ADC_vect
 __interrupt void Sensor_Int(void)
 {
   unsigned char tmp_num;
   tmp_num = 5 - Sen_sel;
-  Sensor_data[tmp_num] = (ADC >> 2);     //¼¾¼­ µ¥ÀÌÅÍ ÀúÀå
+  Sensor_data[tmp_num] = (ADC >> 2);     //ì„¼ì„œ ë°ì´í„° ì €ì¥
   Sen_sel++;
   if(Sen_sel == 6)
   {
@@ -1499,12 +1499,12 @@ __interrupt void Sensor_Int(void)
           num_cnt = 0;
      }
   }
-  Sen_El_Start(Sen_sel);                //´ÙÀ½ ¼¾¼­ ¹ß±¤ ½ÃÀÛ
+  Sen_El_Start(Sen_sel);                //ë‹¤ìŒ ì„¼ì„œ ë°œê´‘ ì‹œì‘
 }
 ////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////
-//    ½Ã¸®¾ó Åë½Å µ¥ÀÌÅÍ ¼ö½Å ÀÎÅÍ·´Æ® Ã³¸®·çÆ¾ ½ÃÀÛ
+//    ì‹œë¦¬ì–¼ í†µì‹  ë°ì´í„° ìˆ˜ì‹  ì¸í„°ëŸ½íŠ¸ ì²˜ë¦¬ë£¨í‹´ ì‹œì‘
 //-----------------------------------------------------------------
 #pragma vector=USART0_RXC_vect
 __interrupt void Sensor_data_receive(void)
@@ -1516,32 +1516,32 @@ __interrupt void Sensor_data_receive(void)
   if(sen_data == 'S')
   {
     MOTOR_ON();
-    LMotor_Inturrupt_Enable();            //¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® Çã¿ë
-    RMotor_Inturrupt_Enable();            //¿À¸¥ÂÊ ¸ğÅÍ ÀÎÅÍ·´Æ® Çã¿ë
+    LMotor_Inturrupt_Enable();            //ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ í—ˆìš©
+    RMotor_Inturrupt_Enable();            //ì˜¤ë¥¸ìª½ ëª¨í„° ì¸í„°ëŸ½íŠ¸ í—ˆìš©
   }
   else if(sen_data == 'E')
   {
-    LMotor_Inturrupt_Disable();            //¿ŞÂÊ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
-    RMotor_Inturrupt_Disable();            //¿À¸¥ÂÊ ¸ğÅÍ ÀÎÅÍ·´Æ® ±İÁö
+    LMotor_Inturrupt_Disable();            //ì™¼ìª½ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
+    RMotor_Inturrupt_Disable();            //ì˜¤ë¥¸ìª½ ëª¨í„° ì¸í„°ëŸ½íŠ¸ ê¸ˆì§€
     MOTOR_OFF();
   }
   else if(sen_data == 'F')
   {
-    LM_FORWARD_GO();                      //¿ŞÂÊ¸ğÅÍ ¾ÕÀ¸·Î ÁøÇà
-    RM_FORWARD_GO();                      //¿À¸¥ÂÊ¸ğÅÍ ¾ÕÀ¸·Î ÁøÇà
+    LM_FORWARD_GO();                      //ì™¼ìª½ëª¨í„° ì•ìœ¼ë¡œ ì§„í–‰
+    RM_FORWARD_GO();                      //ì˜¤ë¥¸ìª½ëª¨í„° ì•ìœ¼ë¡œ ì§„í–‰
   }
   else if(sen_data == 'B')
   {
-    LM_BACKWARD_GO();                     //¿ŞÂÊ¸ğÅÍ µÚ·Î ÁøÇà
-    RM_BACKWARD_GO();                     //¿À¸¥ÂÊ¸ğÅÍ µÚ·Î ÁøÇà
+    LM_BACKWARD_GO();                     //ì™¼ìª½ëª¨í„° ë’¤ë¡œ ì§„í–‰
+    RM_BACKWARD_GO();                     //ì˜¤ë¥¸ìª½ëª¨í„° ë’¤ë¡œ ì§„í–‰
   }
   else if(sen_data == 'D')
   {
-    Sen_sel = 0;                         //¼¾¼­µ¥ÀÌÅÍ ¹Ş±â ½ÃÀÛ
+    Sen_sel = 0;                         //ì„¼ì„œë°ì´í„° ë°›ê¸° ì‹œì‘
   }
   else if(Sen_sel < 6)
   {
-    Sensor_data[Sen_sel++] = sen_data;    //¼¾¼­ µ¥ÀÌÅÍ
+    Sensor_data[Sen_sel++] = sen_data;    //ì„¼ì„œ ë°ì´í„°
   }
 }
 ////////////////////////////////////////////////////////////////////
