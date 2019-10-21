@@ -13,6 +13,8 @@
 #include "acc_tbl.h"
 #include "smooth_turn_tbl.h" 
 
+Test 1
+
 #define Lcd_Page_Limit 17
 #define OneBlockCntStep 210
 #define NORTH  0x10
@@ -68,7 +70,7 @@ unsigned int  num_cnt = 0;
 unsigned char LCD_Page_Num = 4;         //현제 LCD데이터 출력 페이지값 저장
 
 
-Test 2
+Test 3
 
 /////////////////////////////////////////////////////////////
 //		데이터 LCD에 출력 함수
