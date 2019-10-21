@@ -13,7 +13,10 @@
 #include "acc_tbl.h"
 #include "smooth_turn_tbl.h" 
 
+<<<<<<< HEAD
 Test 13
+=======
+>>>>>>> test2
 
 #define Lcd_Page_Limit 17
 #define OneBlockCntStep 210
